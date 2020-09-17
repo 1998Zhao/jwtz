@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    username: root
+    password: Zhao1998!
+    url: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=UTC
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.zhao.jwt.entity
+jwt:
+  expiration: 600000
+  secret: 777888999
+  token: 91298371892
+server:
+  port: 8001
